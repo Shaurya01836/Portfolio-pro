@@ -2,7 +2,7 @@ import React from "react";
 
 function Cards1({ title, buttons = [] }) {
   return (
-    <div className="bg-white min-h-40 w-96 rounded-xl shadow-lg px-4 py-6 flex flex-col justify-evenly gap-4">
+    <div className="bg-white min-h-40 min-w-80 lg:w-96 rounded-xl shadow-lg px-4 py-6 flex flex-col justify-evenly gap-4">
       <h1 className="font-bold">{title}</h1>
 
       <div className="flex flex-wrap gap-2">
