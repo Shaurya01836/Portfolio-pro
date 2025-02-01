@@ -8,8 +8,8 @@ function Contact() {
       <div className="flex flex-col items-center w-full px-20 py-20 gap-10 bg-blue-100">
         <div className="flex flex-col gap-5 items-center">
           <Button content="Contact" />
-          <h1 className="font-bold text-4xl">Let's Connect</h1>
-          <h1 className="font-semibold text-2xl w-3/4 text-center">
+          <h1 className="font-bold text-2xl md:text-4xl">Let's Connect</h1>
+          <h1 className="font-semibold text-xl md:text-2xl md:w-3/4 text-center">
             I'm always open to new opportunities and interesting projects. Feel
             free to reach out!
           </h1>

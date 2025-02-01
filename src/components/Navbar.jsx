@@ -1,38 +1,51 @@
-import React from "react";
-import { RiCodeSSlashFill } from "@remixicon/react";
+import React, { useState } from "react";
+import { RiCodeSSlashFill, RiMenu3Line, RiCloseLine } from "@remixicon/react";
 import Button from "./Button";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <>
-      <div className="flex justify-between items-center py-5 px-20 text-black ">
+    <nav className="bg-white shadow-md">
+      <div className="flex justify-between items-center py-5 px-6 md:px-20 text-black">
+        {/* Logo Section */}
         <div className="text-2xl flex gap-2 items-center">
-          <RiCodeSSlashFill
-            size={36} // set custom `width` and `height`
-            color="black" // set `fill` color
-            className="my-icon" // add custom class name
-          />
-          <h1 className=" font-bold">Shaurya's Portfolio</h1>
+          <RiCodeSSlashFill size={36} color="black" />
+          <h1 className="font-bold">Shaurya's Portfolio</h1>
         </div>
-        <div className="text-xl flex gap-5 items-center font-semibold">
-          <a className="hover:underline" href="">
-            Home
-          </a>
-          <a className="hover:underline" href="">
-            Experience
-          </a>
-          <a className="hover:underline" href="">
-            Projects
-          </a>
-          <a className="hover:underline" href="">
-            Contact
-          </a>
+
+        {/* Desktop Nav Links */}
+        <div className="hidden md:flex gap-5 items-center text-xl font-semibold">
+          <a className="hover:underline" href="#">Home</a>
+          <a className="hover:underline" href="#">Experience</a>
+          <a className="hover:underline" href="#">Projects</a>
+          <a className="hover:underline" href="#">Contact</a>
         </div>
-        <div className="">
+
+        {/* Button for Desktop */}
+        <div className="hidden md:block">
           <Button content="Get in touch" />
         </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <RiCloseLine size={28} /> : <RiMenu3Line size={28} />}
+          </button>
+        </div>
       </div>
-    </>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="md:hidden flex flex-col items-center gap-4 py-5 bg-gray-100">
+          <a className="hover:underline" href="#">Home</a>
+          <a className="hover:underline" href="#">Experience</a>
+          <a className="hover:underline" href="#">Projects</a>
+          <a className="hover:underline" href="#">Contact</a>
+          <Button content="Get in touch" />
+        </div>
+      )}
+    </nav>
   );
 }
 

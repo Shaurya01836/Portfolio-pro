@@ -8,13 +8,13 @@ function Projects() {
       <div className="flex flex-col items-center w-full px-20 py-20 gap-10 bg-blue-100">
         <div className="flex flex-col gap-5 items-center">
           <Button content="Featured Work" />
-          <h1 className="font-bold text-4xl">Recent Projects</h1>
-          <h1 className="font-semibold text-2xl w-3/4 text-center">
+          <h1 className="font-bold text-2xl lg:text-4xl">Recent Projects</h1>
+          <h1 className="font-semibold text-xl w-full md:text-2xl md:w-3/4 text-center">
             A showcase of my latest work, featuring web applications and
             technical solutions.
           </h1>
         </div>
-        <div className="flex items-center gap-10">
+        <div className="md:flex md:flex-row flex flex-col items-center gap-10">
           <Cards
             title="Virtual herbal garden"
             description="Virtual Herbal Garden designed to help users explore a variety of herbs, their uses, and benefits."
