@@ -14,7 +14,7 @@ function Projects() {
             technical solutions.
           </h1>
         </div>
-        <div className="md:flex md:flex-row flex flex-col items-center gap-10">
+        <div className="md:flex lg:flex-row flex flex-col items-center gap-10">
           <Cards
             title="Virtual herbal garden"
             description="Virtual Herbal Garden designed to help users explore a variety of herbs, their uses, and benefits."
