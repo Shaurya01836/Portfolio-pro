@@ -3,7 +3,7 @@ import { RiArrowRightUpLine } from "@remixicon/react";
 
 function Cards({ title, description, buttons = [], link }) {
   return (
-    <div className="bg-white min-h-52 w-96 rounded-xl shadow-lg px-4 py-6 flex flex-col justify-between gap-4">
+    <div className="bg-white min-h-52 min-w-80 lg:w-96 rounded-xl shadow-lg px-4 py-6 flex flex-col justify-between gap-4">
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <h1 className="font-bold">{title}</h1>
