@@ -14,7 +14,7 @@ function Skills() {
             development, backend frameworks, databases and various other tech stacks.
           </h1>
         </div>
-        <div className="flex md:flex-row flex-col items-center gap-10">
+        <div className="flex lg:flex-row flex-col items-center gap-10">
           <Cards1
             title="Frontend Development"
             buttons={["React", "TailwindCSS", "HTML", "CSS", "JavaScript"]}
