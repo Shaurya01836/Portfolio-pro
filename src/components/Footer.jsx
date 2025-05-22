@@ -8,7 +8,7 @@ import {
 
 function Footer() {
   return (
-    <div className="flex flex-col md:flex-row w-full justify-between items-center py-6 px-6 md:px-20 text-blue-500 font-semibold text-center md:text-left">
+    <div className="flex flex-col md:flex-row w-full justify-between items-center py-6 px-6 md:px-20 bg-background text-blue-500 font-semibold text-center md:text-left">
       
       <h1 className="hover:text-customorange transition-colors duration-300">
         © 2025 Shaurya Upadhyay - All rights reserved.
