@@ -1,30 +1,39 @@
-import  { useState } from "react";
-import { RiCodeSSlashFill, RiMenu3Line, RiCloseLine } from "@remixicon/react";
-import Button from "./Button";
+import { useState } from "react";
+import { RiMenu3Line, RiCloseLine } from "@remixicon/react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="flex justify-between items-center py-5 px-6 md:px-20 text-white bg-background">
+    <nav className="shadow-md fixed w-full backdrop-blur-3xl">
+      <div className="flex justify-between items-center py-5 px-6 md:px-20 text-white bg-background/85">
         {/* Logo Section */}
         <div className="text-2xl flex gap-2 items-center">
-          <RiCodeSSlashFill size={36} color="blue" />
+          <p className="text-primary">"</p>
           <h1 className="font-bold">Shaurya</h1>
+          <p className="text-primary">"</p>
         </div>
 
         {/* Desktop Nav Links */}
-        <div className="hidden md:flex gap-5 items-center text-xl font-semibold text-primary">
-          <a className="hover:underline" href="#">Home</a>
-          <a className="hover:underline" href="#">Experience</a>
-          <a className="hover:underline" href="#">Projects</a>
-          <a className="hover:underline" href="#">Contact</a>
-        </div>
 
-        {/* Button for Desktop */}
-        <div className="hidden md:block">
-          <Button content="Contact" />
+        <div className="hidden md:flex">
+          <div className="hidden md:flex gap-5 items-center text-xl font-semibold text-primary">
+            <a className="hover:text-customorange" href="#home">
+              Home
+            </a>
+            <a className="hover:text-customorange" href="#projects">
+              Projects
+            </a>
+            <a className="hover:text-customorange" href="#about">
+              About Me
+            </a>
+            <a className="hover:text-customorange" href="#achievements">
+              Achievements
+            </a>
+            <a className="hover:text-customorange" href="#contact">
+              Connect
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -37,12 +46,22 @@ function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="md:hidden flex flex-col items-center gap-4 py-5 bg-gray-100">
-          <a className="hover:underline" href="#">Home</a>
-          <a className="hover:underline" href="#">Experience</a>
-          <a className="hover:underline" href="#">Projects</a>
-          <a className="hover:underline" href="#">Contact</a>
-          <Button content="Get in touch" />
+        <div className="md:hidden flex flex-col items-center gap-4 py-5 bg-background text-primary">
+          <a className="hover:underline" href="#home">
+            Home
+          </a>
+          <a className="hover:underline" href="#projects">
+            Projects
+          </a>
+          <a className="hover:underline" href="#about">
+            About Me
+          </a>
+          <a className="hover:underline" href="#achievements">
+            Achievements
+          </a>
+          <a className="hover:underline" href="#contact">
+            Connect
+          </a>
         </div>
       )}
     </nav>

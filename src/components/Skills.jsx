@@ -27,6 +27,7 @@ const skillsData = [
       { name: "C", level: 85, label: "Great" },
       { name: "C++", level: 75, label: "Good" },
       { name: "DSA with C", level: 80, label: "Good" },
+      { name: "Github", level: 85, label: "Good" },
     ],
   },
 ];

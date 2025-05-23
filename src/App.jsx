@@ -1,4 +1,3 @@
-
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
@@ -11,11 +10,21 @@ function App() {
   return (
     <div className="">
       <Navbar />
-      <Header />
-      <Projects />
-      <Skills />
-      <Achievements />
-      <Contact />
+      <section id="home">
+        <Header />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="about">
+        <Skills />
+      </section>
+      <section id="achievements">
+        <Achievements />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       <Footer />
     </div>
   );
