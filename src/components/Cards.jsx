@@ -1,21 +1,25 @@
 import React from "react";
 import { RiExternalLinkLine, RiCodeBoxLine } from "@remixicon/react";
 
-function Cards({ title, description, techStack = [], liveDemo, viewCode }) {
+function Cards({
+  title,
+  description,
+  techStack = [],
+  liveDemo,
+  viewCode,
+  image,
+}) {
   return (
     <div className="bg-[#0F1117] text-white w-80 lg:w-[420px] rounded-xl p-4 shadow-md border border-gray-800">
-    
       <div className="w-full h-40 bg-gray-800 rounded-lg flex items-center justify-center">
-        <span className="text-gray-500">🖼 Image</span>
+        <img className="w-full h-40 object-cover rounded-xl" src={image} alt="project image" />
       </div>
 
-     
       <div className="mt-4">
         <h2 className="text-xl font-bold">{title}</h2>
         <p className="text-gray-400 mt-1 text-sm">{description}</p>
       </div>
 
-    
       <div className="flex flex-wrap gap-2 mt-4">
         {techStack.map((tech, index) => (
           <span
@@ -27,7 +31,6 @@ function Cards({ title, description, techStack = [], liveDemo, viewCode }) {
         ))}
       </div>
 
-     
       <div className="flex gap-3 mt-5">
         {liveDemo && (
           <a

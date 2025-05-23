@@ -1,6 +1,6 @@
-import React from "react";
-import Button from "./Button";
 import Cards from "./Cards";
+import Cryptify from "../assets/Cryptify.png";
+import AcheWaleBhaiya from "../assets/Ache_Wale_bhaiya.png";
 
 function Projects() {
   return (
@@ -20,6 +20,7 @@ function Projects() {
             techStack={["React", "Tailwind CSS", "Solidity"]}
             liveDemo="https://cryptify-defi.vercel.app/"
             viewCode="https://github.com/dhruv457457/EduChain_Web-3-Project"
+            image={Cryptify}
           />
           <Cards
             title="Virtual herbal garden"
@@ -27,6 +28,7 @@ function Projects() {
             techStack={["React", "Firebase", "MongoDB", "CosmoCloud"]}
             liveDemo="https://ayurherb.vercel.app/"
             viewCode="https://github.com/Shaurya01836/AyurHerb"
+            image="https://i.ibb.co/prKX52Sw/Screenshot-194.png"
           />
 
           <Cards
@@ -35,6 +37,7 @@ function Projects() {
             techStack={["React", "Firebase", "Tailwind CSS"]}
             liveDemo="https://ache-wale-bhaiya.vercel.app/"
             viewCode="https://github.com/Shaurya01836/ache_wale_bhaiya"
+            image={AcheWaleBhaiya}
           />
         </div>
       </div>
