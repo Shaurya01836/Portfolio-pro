@@ -8,24 +8,26 @@ import Achievements from "./components/Achievements";
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-background">
       <Navbar />
-      <section id="home">
-        <Header />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="about">
-        <Skills />
-      </section>
-      <section id="achievements">
-        <Achievements />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
-      <Footer />
+      <div className="pt-10">
+        <section id="home">
+          <Header />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="about">
+          <Skills />
+        </section>
+        <section id="achievements">
+          <Achievements />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <Footer />
+      </div>
     </div>
   );
 }

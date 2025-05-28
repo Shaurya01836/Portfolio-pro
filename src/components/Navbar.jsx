@@ -5,8 +5,8 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="shadow-md fixed w-full backdrop-blur-3xl">
-      <div className="flex justify-between items-center py-5 px-6 md:px-20 text-white bg-background/85">
+    <nav className="shadow-md fixed w-full backdrop-blur-3xl bg-background/85">
+      <div className="flex justify-between items-center py-5 px-6 md:px-20 text-white ">
         {/* Logo Section */}
         <div className="text-2xl flex gap-2 items-center">
           <p className="text-primary">"</p>
