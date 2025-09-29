@@ -1,38 +1,68 @@
 import React from "react";
-import BentoCard from "./BentoCard";
+import { RiTrophyLine } from "@remixicon/react";
 
 const achievementsData = [
-  // ... your achievements data remains the same
   {
-    title: "Edu Chain Semester 3 Hackathon",
-    description: "Secured 6th place in the Earn category out of 9000+ participants.",
-    year: 2025,
+    title: "6th Place, Earn Category",
+    event: "EDU Chain Semester 3 Hackathon",
+    year: "2025",
+    description:
+      "Cryptify secured 6th place among 9000+ participants and 150 shortlisted projects, recognized for innovation in decentralized finance and practical Web3 utility.",
+    icon: <RiTrophyLine />,
   },
   {
-    title: "Cosmocloud Hackathon",
-    description: "Awarded 'Best in Health-Tech' at the Cosmocloud Low-Code Hackathon.",
-    year: 2024,
+    title: "Top 4 Finalist",
+    event: "Hack Quest 12-Hour Hackathon",
+    year: "2025",
+    description:
+      "Recognized for the rapid development and presentation of the Cryptify platform.",
+    icon: <RiTrophyLine />,
   },
   {
-    title: "Tek Connect",
-    description: "Secured 2nd place in the competition.",
-    year: 2024,
+    title: "Category Winner, Health Track",
+    event: "Cosmo Cloud Hackathon",
+    year: "2024",
+    description:
+      "Awarded for AyurHerb, a virtual herbal garden with chatbot support and MongoDB integration.",
+    icon: <RiTrophyLine />,
+  },
+  {
+    title: "2nd Place",
+    event: "TEK Connect",
+    year: "2024",
+    description:
+      "Secured a top position among 50+ teams for the AyurHerb project.",
+    icon: <RiTrophyLine />,
   },
 ];
 
 const Achievements = () => {
   return (
-    <div className="flex flex-col items-center w-full px-8 md:px-20 py-20 gap-10 text-black">
-      <h1 className="font-bold text-3xl lg:text-4xl">Achievements</h1>
+    <div className="flex flex-col items-center w-full px-8  py-20 gap-10 text-black">
+      {/* Section Header */}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
-        {achievementsData.map(({ title, description, year }, index) => (
-          <BentoCard key={index} className="items-start p-6 text-left">
-            <h2 className="text-xl font-bold mb-2">
-              {title} <span className="text-blue-500 font-medium">({year})</span>
-            </h2>
-            <p className="text-gray-600">{description}</p>
-          </BentoCard>
+      <h1 className="font-bold text-xl">Achievements</h1>
+
+      {/* Achievements List */}
+      <div className="w-full space-y-8">
+        {achievementsData.map((achievement, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-6 p-6 border border-gray-200 rounded-3xl shadow-sm "
+          >
+            <div className="text-blue-500 bg-blue-50 p-3 rounded-full">
+              {achievement.icon}
+            </div>
+            <div className="flex-1">
+              <h2 className="text-xl font-bold text-gray-800">
+                {achievement.title}
+              </h2>
+              <p className="text-md font-semibold text-gray-500">
+                {achievement.event} ({achievement.year})
+              </p>
+              <p className="mt-2 text-gray-600">{achievement.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
