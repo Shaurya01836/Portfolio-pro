@@ -1,46 +1,42 @@
-
+import React from "react";
+import BentoCard from "./BentoCard";
 
 const achievementsData = [
+  // ... your achievements data remains the same
   {
     title: "Edu Chain Semester 3 Hackathon",
-    description:
-      "secured 6th place in the Earn category of the EDU Chain Semester 3 Hackathon! 🏆 Over 9000+ participants, 150 shortlisted, and we made it to the top! 💥",
+    description: "Secured 6th place in the Earn category out of 9000+ participants.",
     year: 2025,
   },
   {
     title: "Cosmocloud Hackathon",
-    description:
-      "secured the Best in Health-Tech award at the Cosmocloud Low-Code Hackathon 2024! 🎉",
+    description: "Awarded 'Best in Health-Tech' at the Cosmocloud Low-Code Hackathon.",
     year: 2024,
   },
   {
     title: "Tek Connect",
-    description: "secured 2nd place!",
+    description: "Secured 2nd place in the competition.",
     year: 2024,
   },
 ];
 
-function Achievements() {
+const Achievements = () => {
   return (
-    <div className="flex flex-col items-center w-full px-8 py-16 gap-8 bg-background text-white">
-      <h1 className="font-bold text-3xl md:text-4xl mb-8">Achievements</h1>
+    <div className="flex flex-col items-center w-full px-8 md:px-20 py-20 gap-10 text-black">
+      <h1 className="font-bold text-3xl lg:text-4xl">Achievements</h1>
 
-      <div className="flex flex-col gap-6 max-w-4xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
         {achievementsData.map(({ title, description, year }, index) => (
-          <div
-            key={index}
-            className="bg-gray-800 rounded-xl shadow-md p-6 border border-blue-500"
-          >
-            <h2 className="text-xl font-semibold mb-2">
-              {title}{" "}
-              <span className="text-blue-400 font-normal">({year})</span>
+          <BentoCard key={index} className="items-start p-6 text-left">
+            <h2 className="text-xl font-bold mb-2">
+              {title} <span className="text-blue-500 font-medium">({year})</span>
             </h2>
-            <p className="text-gray-300">{description}</p>
-          </div>
+            <p className="text-gray-600">{description}</p>
+          </BentoCard>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Achievements;

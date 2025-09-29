@@ -1,43 +1,88 @@
-function Header() {
+
+import BentoCard from "./BentoCard";
+
+// Logos
+const githubLogoUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
+const leetcodeLogoUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leetcode/leetcode-original.svg";
+const gfgLogoUrl = "https://media.geeksforgeeks.org/wp-content/uploads/20230403183704/gfg_logo.png";
+const hackerrankLogoUrl = "https://cdn-1.webcatalog.io/catalog/hackerrank/hackerrank-icon.png";
+const portfolioIconUrl = "https://static.thenounproject.com/png/1135422-200.png";
+
+const Header = () => {
   return (
-    <div className="flex flex-col items-center w-full px-6 py-16 md:px-20 md:py-28 gap-10 bg-background text-center text-foreground">
-      <div className="flex flex-col gap-5 items-center">
-        <p className="px-4 py-1 border border-customBlue rounded-full text-sm text-customBlue font-medium">
-          Available for freelance work
-        </p>
+    <div className="p-4 md:p-8 text-black lg:min-h-screen flex items-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+        {/* Location Card */}
+        <BentoCard className="col-span-2 h-48 p-0">
+          <img
+            src="https://i.imgur.com/6o4q27B.png"
+            alt="Map of Jaipur"
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </BentoCard>
 
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white">
-          Hi, I'm <span className="text-customBlue">Shaurya</span>
-        </h1>
+        {/* CRT Presentation Card */}
+        <BentoCard className="h-48 p-0">
+          <img
+            src="https://i.imgur.com/example.jpg" // Replace with a real image URL
+            alt="CRT Presentation"
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </BentoCard>
 
-        <p className="text-lg md:text-xl font-medium text-gray-400">
-          Web Developer | React & Java Enthusiast
-        </p>
+        {/* --- Updated Centered Link Cards --- */}
+        <BentoCard className="h-48 p-4">
+          <div className="flex flex-col items-center justify-center text-center gap-2">
+            <img src={portfolioIconUrl} alt="Portfolio Icon" className="w-10 h-10"/>
+            <div>
+              <h2 className="font-semibold text-lg">Portfolio</h2>
+              <p className="text-gray-500 text-sm">shaurya-upadhyay.me</p>
+            </div>
+          </div>
+        </BentoCard>
 
-        <p className="text-sm md:text-lg max-w-2xl text-gray-400">
-          I craft responsive, user-friendly web experiences with modern
-          technologies. Passionate about clean code, intuitive UIs, and creating
-          digital solutions that make a difference.
-        </p>
-      </div>
-
-      <div className="flex flex-col md:flex-row gap-5 items-center">
-        <button className="bg-customBlue hover:bg-blue-600 text-white px-6 py-2 rounded-xl font-semibold text-sm">
-          View Projects
-        </button>
-
-        <a
-          href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/26823516/MjY4MjM1MTY=.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-black text-white px-6 py-2 border border-white rounded-xl font-semibold text-sm hover:bg-customorange"
-        >
-          <span>View Resume</span>
-          <span>↓</span>
-        </a>
+        <BentoCard className="h-48 p-4">
+          <a href="https://github.com/Shaurya01836" target="_blank" rel="noopener noreferrer" className="h-full w-full flex flex-col items-center justify-center text-center gap-2">
+            <img src={githubLogoUrl} alt="GitHub Logo" className="w-10 h-10"/>
+            <div>
+                <h2 className="font-semibold text-lg">GitHub Profile</h2>
+                <p className="text-gray-500 text-sm">github.com</p>
+            </div>
+          </a>
+        </BentoCard>
+        
+        <BentoCard className="h-48 p-4">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="h-full w-full flex flex-col items-center justify-center text-center gap-2">
+            <img src={leetcodeLogoUrl} alt="LeetCode Logo" className="w-10 h-10"/>
+            <div>
+                <h2 className="font-semibold text-lg">LeetCode Profile</h2>
+                <p className="text-gray-500 text-sm">leetcode.com</p>
+            </div>
+          </a>
+        </BentoCard>
+        
+        <BentoCard className="h-48 p-4">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="h-full w-full flex flex-col items-center justify-center text-center gap-2">
+             <img src={gfgLogoUrl} alt="GeeksForGeeks Logo" className="w-10 h-10"/>
+             <div>
+                <h2 className="font-semibold text-lg">Geeks for Geeks</h2>
+                <p className="text-gray-500 text-sm">geeksforgeeks.org</p>
+            </div>
+          </a>
+        </BentoCard>
+        
+        <BentoCard className="h-48 p-4">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="h-full w-full flex flex-col items-center justify-center text-center gap-2">
+            <img src={hackerrankLogoUrl} alt="HackerRank Logo" className="w-10 h-10"/>
+            <div>
+                <h2 className="font-semibold text-lg">HackerRank Profile</h2>
+                <p className="text-gray-500 text-sm">hackerrank.com</p>
+            </div>
+          </a>
+        </BentoCard>
       </div>
     </div>
   );
-}
+};
 
 export default Header;
