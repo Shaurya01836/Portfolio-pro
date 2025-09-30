@@ -1,4 +1,5 @@
 import BentoCard from "./BentoCard";
+import { RiFileTextLine } from "@remixicon/react"; 
 
 // Logos
 const githubLogoUrl =
@@ -9,8 +10,7 @@ const gfgLogoUrl =
   "https://media.geeksforgeeks.org/wp-content/uploads/20230403183704/gfg_logo.png";
 const hackerrankLogoUrl =
   "https://cdn-1.webcatalog.io/catalog/hackerrank/hackerrank-icon.png";
-const resumeUrl =
-  "https://media.licdn.com/dms/image/v2/D562DAQHbpZH_5T8L3w/profile-treasury-image-shrink_800_800/B56ZlH.z9YIAAY-/0/1757849273848?e=1759773600&v=beta&t=4-vUpROOgpYyF2VpolMNSBVo_b4iyfrVZhXw-AXTOIk";
+
 
 const Header = () => {
   return (
@@ -34,7 +34,7 @@ const Header = () => {
           />
         </BentoCard>
 
-        {/* --- Updated Centered Link Cards --- */}
+        {/* --- Resume Link Card (ICON REPLACED) --- */}
         <BentoCard className="h-48 p-4">
           <a
             href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/26823516/MjY4MjM1MTY=.pdf"
@@ -42,7 +42,8 @@ const Header = () => {
             rel="noopener noreferrer"
             className="h-full w-full flex flex-col items-center justify-center text-center gap-2"
           >
-            <img src={resumeUrl} alt="GitHub Logo" className="w-10 h-10" />
+            {/* Replaced <img src={resumeUrl} ... /> with the Remixicon */}
+            <RiFileTextLine size={40} className="text-gray-800" />
             <div>
               <h2 className="font-semibold text-lg">Resume</h2>
               <p className="text-gray-500 text-sm">shaurya.resume</p>

@@ -14,7 +14,7 @@ const useOnScreen = (ref) => {
         }
       },
       {
-        threshold: 0.5, // The element is considered "on screen" when 50% is visible
+        threshold: 0.1, // Changed from 0.5 (50%) to 0.1 (10%) for better tracking of smaller/end sections
       }
     );
 

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Profile from "./components/Profile";
+import Profile, { ConnectSection } from "./components/Profile"; // Import ConnectSection
 import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -15,6 +15,7 @@ function App() {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const achievementsRef = useRef(null);
+  const contactRef = useRef(null); // New ref for the contact section
 
   // 3. Check if each section is on screen
   const activeSections = {
@@ -23,6 +24,7 @@ function App() {
     about: useOnScreen(aboutRef),
     experience: useOnScreen(experienceRef),
     achievements: useOnScreen(achievementsRef),
+    contact: useOnScreen(contactRef), // Track new contact section
   };
 
   return (
@@ -53,6 +55,13 @@ function App() {
           </section>
         </main>
       </div>
+      
+      {/* NEW SECTION: Connect section only for small devices */}
+      {/* This section will appear AFTER all main content on mobile screens */}
+      <section id="contact" ref={contactRef} className="lg:hidden px-8 pb-20"> 
+          <ConnectSection />
+      </section>
+      
       {/* 5. Pass the active state to the BottomNav */}
       <BottomNav activeSections={activeSections} />
     </div>

@@ -6,6 +6,54 @@ import {
   RiTwitterLine,
 } from "@remixicon/react";
 
+// NEW EXPORTED COMPONENT: Contains the Let's Connect content
+export const ConnectSection = ({ className }) => (
+  <div className={`mt-10 ${className}`}>
+    <h2 className="text-2xl font-bold mb-4">Let's Connect</h2>
+    <div className="flex items-center gap-4">
+      <a
+        href="mailto:youremail@example.com"
+        className="bg-black text-white hover:bg-gray-800 px-5 py-2 rounded-full font-semibold transition-colors duration-300"
+      >
+        Send Email
+      </a>
+      {/* Social Icons */}
+      <a
+        href="https://www.linkedin.com/in/this-is-shaurya-upadhyay"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-500 hover:text-blue-600"
+      >
+        <RiLinkedinLine size={28} />
+      </a>
+      <a
+        href="https://github.com/Shaurya01836"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-500 hover:text-black"
+      >
+        <RiGithubLine size={28} />
+      </a>
+      <a
+        href="https://x.com/shaurya01836"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-500 hover:text-blue-400"
+      >
+        <RiTwitterLine size={28} />
+      </a>
+      <a
+        href="https://www.instagram.com/shaurya_mnu/profilecard/?igsh=d21qb2E1cDZ6Yjdr"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-500 hover:text-pink-500"
+      >
+        <RiInstagramLine size={28} />
+      </a>
+    </div>
+  </div>
+);
+
 const Profile = () => {
   return (
     <div className="flex flex-col h-full justify-center p-8 lg:pl-20">
@@ -27,28 +75,9 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* "Let's Connect" Section */}
-      <div className="mt-10">
-        <h2 className="text-2xl font-bold mb-4">Let's Connect</h2>
-        <div className="flex items-center gap-4">
-          <a href="mailto:youremail@example.com" className="bg-black text-white hover:bg-gray-800 px-5 py-2 rounded-full font-semibold transition-colors duration-300">
-            Send Email
-          </a>
-          {/* Social Icons */}
-          <a href="https://www.linkedin.com/in/this-is-shaurya-upadhyay" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600">
-            <RiLinkedinLine size={28} />
-          </a>
-          <a href="https://github.com/Shaurya01836" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black">
-            <RiGithubLine size={28} />
-          </a>
-          <a href="https://x.com/shaurya01836" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-400">
-            <RiTwitterLine size={28} />
-          </a>
-          <a href="https://www.instagram.com/shaurya_mnu/profilecard/?igsh=d21qb2E1cDZ6Yjdr" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-500">
-            <RiInstagramLine size={28} />
-          </a>
-        </div>
-      </div>
+      {/* "Let's Connect" Section - HIDDEN on small screens */}
+      {/* This only shows in the fixed sidebar on desktop */}
+      <ConnectSection className="hidden lg:block" />
     </div>
   );
 };
