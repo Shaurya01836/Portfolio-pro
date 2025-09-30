@@ -15,21 +15,21 @@ const hackerrankLogoUrl =
 const Header = () => {
   return (
     <div className="p-4 md:p-8 text-black lg:min-h-screen flex items-center">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-        {/* Location Card */}
-        <BentoCard className="col-span-2 h-48 p-0">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full items-center">
+      
+        <BentoCard className="col-span-2 h-44 p-0">
           <img
-            src="https://i.ibb.co/hF4P8c3v/Screenshot-2025-09-29-232503.png"
-            alt="Map of Jaipur"
+            src="https://i.ibb.co/sdJT6xxV/image.png"
+            alt="Primary image"
             className="w-full h-full object-cover rounded-2xl"
           />
         </BentoCard>
 
-        {/* CRT Presentation Card */}
+       
         <BentoCard className="h-48 p-0">
           <img
-            src="https://i.ibb.co/HDG54N2Q/1747907083945.jpg" // Replace with a real image URL
-            alt="CRT Presentation"
+            src="https://i.ibb.co/HDG54N2Q/1747907083945.jpg" 
+            alt="secondary image"
             className="w-full h-full object-cover rounded-2xl"
           />
         </BentoCard>
